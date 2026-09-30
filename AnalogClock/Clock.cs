@@ -80,10 +80,66 @@ namespace AnalogClock
                 );
             }
 
+            //Draw clock hands
+            DrawHands();
+
             // Display bitmap in PictureBox
             pictureBox1.Image = bitmap;
         }
 
+        private void DrawHands()
+        {
+            // Hour hand
+            double hourAngle = Math.PI / 6 * 10;
+
+            int hourX = cx + (int)(100 * Math.Sin(hourAngle));
+            int hourY = cy - (int)(100 * Math.Cos(hourAngle));
+
+            using (Pen hourPen = new Pen(Color.Black, 6))
+            {
+                cg.DrawLine(
+                    hourPen,
+                    cx,
+                    cy,
+                    hourX,
+                    hourY
+                );
+
+            }
+            // Minute hand
+            double minuteAngle = Math.PI / 6 * 2;
+
+            int minuteX = cx + (int)(135 * Math.Sin(minuteAngle));
+            int minuteY = cy - (int)(135 * Math.Cos(minuteAngle));
+
+            using (Pen minutePen = new Pen(Color.Black, 4))
+            {
+                cg.DrawLine(
+                    minutePen,
+                    cx,
+                    cy,
+                    minuteX,
+                    minuteY
+                );
+            }
+
+            // Second hand
+            double secondAngle = Math.PI / 6 * 6;
+
+            int secondX = cx + (int)(155 * Math.Sin(secondAngle));
+            int secondY = cy - (int)(155 * Math.Cos(secondAngle));
+
+            using (Pen secondPen = new Pen(Color.Red, 2))
+            {
+                cg.DrawLine(
+                    secondPen,
+                    cx,
+                    cy,
+                    secondX,
+                    secondY
+                );
+            }
+        }
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             // Dispose graphics
