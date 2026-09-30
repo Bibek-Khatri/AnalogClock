@@ -33,6 +33,7 @@ namespace AnalogClock
 
             // Draw clock design
             Draw();
+            timer1.Start();
         }
 
         private void Draw()
@@ -90,7 +91,8 @@ namespace AnalogClock
         private void DrawHands()
         {
             // Hour hand
-            double hourAngle = Math.PI / 6 * 10;
+            DateTime now = DateTime.Now;
+            double hourAngle = Math.PI / 6 * now.Hour;
 
             int hourX = cx + (int)(100 * Math.Sin(hourAngle));
             int hourY = cy - (int)(100 * Math.Cos(hourAngle));
@@ -107,7 +109,7 @@ namespace AnalogClock
 
             }
             // Minute hand
-            double minuteAngle = Math.PI / 6 * 2;
+            double minuteAngle = Math.PI / 30 * now.Minute;
 
             int minuteX = cx + (int)(135 * Math.Sin(minuteAngle));
             int minuteY = cy - (int)(135 * Math.Cos(minuteAngle));
@@ -124,7 +126,7 @@ namespace AnalogClock
             }
 
             // Second hand
-            double secondAngle = Math.PI / 6 * 6;
+            double secondAngle = Math.PI / 30 * now.Second;
 
             int secondX = cx + (int)(155 * Math.Sin(secondAngle));
             int secondY = cy - (int)(155 * Math.Cos(secondAngle));
@@ -140,6 +142,11 @@ namespace AnalogClock
                 );
             }
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Draw();
+        }
+
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             // Dispose graphics
