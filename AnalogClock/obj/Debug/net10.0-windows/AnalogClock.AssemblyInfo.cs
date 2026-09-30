@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnalogClock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc334aa59ebec10b722f4e2c509a33e63aa40b23")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnalogClock")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnalogClock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

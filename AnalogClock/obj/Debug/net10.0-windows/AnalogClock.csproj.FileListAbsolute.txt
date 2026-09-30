@@ -15,3 +15,4 @@ C:\Users\Acer Nitro v16\Desktop\Desktop application\AnalogClock\AnalogClock\obj\
 C:\Users\Acer Nitro v16\Desktop\Desktop application\AnalogClock\AnalogClock\obj\Debug\net10.0-windows\AnalogClock.genruntimeconfig.cache
 C:\Users\Acer Nitro v16\Desktop\Desktop application\AnalogClock\AnalogClock\obj\Debug\net10.0-windows\ref\AnalogClock.dll
 C:\Users\Acer Nitro v16\Desktop\Desktop application\AnalogClock\AnalogClock\obj\Debug\net10.0-windows\AnalogCl.38AF457F.Up2Date
+C:\Users\Acer Nitro v16\Desktop\Desktop application\AnalogClock\AnalogClock\obj\Debug\net10.0-windows\AnalogClock.sourcelink.json
