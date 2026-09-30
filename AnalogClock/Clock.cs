@@ -92,7 +92,7 @@ namespace AnalogClock
         {
             // Hour hand
             DateTime now = DateTime.Now;
-            double hourAngle = Math.PI / 6 * now.Hour;
+            double hourAngle = Math.PI / 6 * (now.Hour % 12 + now.Minute / 60.0);
 
             int hourX = cx + (int)(100 * Math.Sin(hourAngle));
             int hourY = cy - (int)(100 * Math.Cos(hourAngle));
